@@ -1,13 +1,316 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+background-color: var(--background);
+transition:  background-color 1s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Devil{
+  background-color: black;
 }
+
+::selection{
+  background-color:var(--cursor-color) ;
+  color: var(--link-color);
+}
+.Devil ::selection{
+  background-color: rgb(70, 33, 19) ;
+}
+
+:root{
+  --background: rgb(33, 29, 26);
+  --prompt-color:rgb(93, 141, 119);
+  --input-color:rgb(160, 133, 113);
+  --cursor-color:#7ba6ac;
+  --link-color:rgb(143, 117, 123);
+
+}
+.app{
+  padding: 20px;
+}
+*{
+  margin: 0;
+  padding: 0;
+
+}
+.output-container{
+  padding: 10px;
+  font-size: 17px;
+}
+
+.help-output{
+  display: flex;
+  align-items: flex-start; 
+  gap: 50px;
+  margin-bottom: 5px;
+  
+}
+.help-command{
+  min-width: 150px;
+  color: var(--cursor-color);
+  text-shadow: 0 0 7px #9c9393;
+  transition:  color 1s ease;
+}
+.Devil .help-command{
+  color: #9b5a11;
+}
+.help-description{
+  color: var(--input-color);
+  transition:  color 1s ease;
+}
+.Devil .help-description{
+  color: rgb(241, 217, 186);
+}
+.whois-output{
+  color: var(--input-color);
+  line-height: 1.4rem; 
+  letter-spacing: 1px;
+  transition:  color 1s ease;
+}
+.Devil .whois-output{
+  color: #9b5a11;
+}
+.whoami-output{
+  color: var(--input-color);
+  line-height: 1.4rem; 
+  letter-spacing: 2px;
+  transition:  color 1s ease;
+}
+.Devil .whoami-output{
+  color: #9b5a11;
+}
+.social{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 5px;
+}
+.social-command{
+  min-width: 150px;
+  color: var(--input-color);
+  transition:  color 1s ease;
+}
+.Devil .social-command{
+    color: #9b5a11;
+}
+
+.social-description{
+  text-decoration: none;
+  color: var(--link-color);
+  transition:  color 1s ease;
+  padding: 5px 8px;
+}
+
+.Devil .social-description{
+  color: rgb(241, 217, 186);
+}
+
+.social-description:hover{
+  background-color: var(--cursor-color);
+  border-radius: 5px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  min-width: 150px;
+}
+.Devil .social-description:hover{
+  background-color: red;
+  color: #000;
+}
+.project{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 5px;
+}
+.projects-command{
+  min-width: 150px;
+  color: var(--input-color);
+  transition:  color 1s ease;
+}
+.Devil .projects-command{
+  color: #9b5a11;
+}
+.projects-description{
+  text-decoration: none;
+  transition:  color 1s ease;
+  color: var(--link-color);
+ 
+}
+.Devil .projects-description{
+  color: rgb(241, 217, 186);
+}
+.projects-description:hover{
+  background-color: var(--cursor-color);
+  transition:  background-color 1s ease;
+}
+.Devil .projects-description:hover{
+  background-color: red;
+  color: #000;
+}
+.history p{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--input-color);
+  justify-content: center;
+  transition:  color 1s ease;
+  margin-bottom: 5px;
+}
+.Devil .history p{
+  color: #9b5a11;
+}
+.email{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+.email span{
+  color: var(--input-color);
+  transition:  color 1s ease;
+}
+.Devil .email span{
+  color: #9b5a11;
+}
+.email a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition:  color 1s ease;
+}
+.Devil .email a{
+  color: rgb(241, 217, 186);
+}
+.default{
+  color: var(--link-color);
+  transition:  color 1s ease;
+  
+}
+.Devil .default{
+  color: #9b5a11;
+}
+.default .help-effect{
+  margin-left: 5px;
+  color: var(--cursor-color);
+  text-shadow: 0 0 7px #ffff;
+  transition:  color 1s ease,text-shadow 1s ease;
+}
+.Devil .default .help-effect{
+    color: rgb(114, 114, 114);
+}
+.cv-download p{
+  color: var(--cursor-color);
+  text-shadow: 0 0 7px #ffff;
+  transition:  color 1s ease,text-shadow 1s ease;
+  
+}
+.Devil .cv-download p{
+  color: #9b5a11;
+}
+.theme{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  
+}
+.theme-command{
+  color: var(--input-color);
+  transition:  color 1s ease;
+  min-width: 150px;
+}
+.Devil .theme-command{
+  color: #9b5a11;
+}
+.theme-btn button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--cursor-color);
+  padding: 5px 15px;
+  min-width: 100px;
+  transition: background-color 0.5s ease,color 0.5s ease;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Devil .theme-btn button{
+  color: rgb(241, 217, 186);
+}
+.theme-btn button:hover{
+  background-color: var(--prompt-color);
+  color: var(--input-color);
+}
+.Devil .theme-btn button:hover{
+  background-color: red;
+  color: #000;
+}
+
+@media screen and (max-width: 480px) {
+  .output-container{
+    padding: 5px;
+    font-size: 14px;
+  }
+  .help-output{
+    display: flex;
+    align-items: flex-start; 
+    gap: 10px;
+    margin-bottom: 5px;
+    
+  }
+  .help-command{
+    min-width: 70px;
+    color: var(--cursor-color);
+    text-shadow: 0 0 7px #9c9393;
+  }
+  .whois-output{
+    color: var(--input-color);
+    line-height: 1rem; 
+    text-align: justify;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+  }
+  .whoami-output{
+    color: var(--input-color);
+    line-height: 1rem; 
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  .social{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 5px;
+  }
+  .social-command{
+    min-width:60px;
+    color: var(--input-color);
+  }
+  
+  .social-description{
+    text-decoration: none;
+    color: var(--link-color);
+    padding: 0;
+  }
+  
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+ 
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+ 
+}
+
+  @media screen and (min-width: 1281px) and (max-width: 1440px) {
+   
+   
+}
+  
+  
+  @media screen and (min-width: 1441px) and (max-width: 1920px) {
+   
+ 
+}
+  

@@ -1,0 +1,146 @@
+[
+    {
+        "commands":{
+            "help":{
+                "output":[
+                    {
+                        "command":"whois",
+                        "description":"Who is Alperen?"
+                    },
+                    {
+                        "command":"whoami",
+                        "description":"Who are you?"
+                    },
+                    {
+                        "command":"social",
+                        "description":"Display social networks"
+                    },
+                    {
+                        "command":"project",
+                        "description":"View coding projects"
+                    },
+                    {
+                        "command":"Theme",
+                        "description":"Change theme color"
+                    },    
+                    {
+                        "command":"cv",
+                        "description":"Download my latest CV"   
+                    },
+                    {
+                        "command":"history",
+                        "description":"View command history"
+
+                    },
+                    {
+                        "command":"help",
+                        "description":"You obviously already know what this does"
+                    },
+                    {
+
+                        "command":"email",
+                        "description":"Feel free to email me"
+                    },
+                    {
+                        "command":"clear",
+                        "description":"Clear terminal"
+                    },
+                    {
+                        "command":"banner",
+                        "description":"Display the header"
+                        
+                    }
+              
+                ]
+            },
+            "whois":{
+                "output":[
+                    "Hey I'm Alperen! 👋",
+                    "My name is Alperen Ilgaz, and I am a third-year Software Engineering student at Atatürk University." ,
+                    "Alongside my academic pursuits, I am the president of ATASENG, a student club at my university.",
+                    "I have developed a strong passion for frontend development, and over time, I have advanced my skills to a proficient level, particularly in ReactJS.",
+                    "I have completed a comprehensive series of frontend development courses on Udemy, covering a wide array of topics including ReactJS, HTML, CSS, Bootstrap, Data Structures, JavaScript, Python, and Django.",
+                    "These courses have played a significant role in my growth as a web developer, enabling me to acquire a robust skill set in both frontend and backend technologies.",
+                    "Through these intensive programs, I have gained a deeper understanding of web development principles—from crafting responsive user interfaces to implementing complex server-side logic."
+                ]
+                
+            },
+            "whoami":{
+                "output":[
+                    "Who am I? I mean, where am I?"
+                ]
+            },
+            "social":{
+                "output":[
+                    {
+                        "command":"Github",
+                        "link":"https://github.com/alperenilgaz",
+                        "description":"github/alperenilgaz"
+                    },
+                    {
+                        "command":"Linkedin",
+                        "link":"https://www.linkedin.com/in/alperen-ilgaz-00b67527b/",
+                        "description":"Linkedin/alperenilgaz"
+                    }    
+                ]
+            },
+            "projects":{
+                "output":[
+                    {
+                        "command":"My Github Repos",
+                        "link":"https://github.com/alperenilgaz?tab=repositories",
+                        "description":"github/alperenilgaz"
+                    }
+                  
+                ]
+            },
+            "history":{
+                "output":[]
+            },
+            "theme":{
+                "output":[
+                    {
+                        "command":"Theme",
+                        "description":[
+                            {
+                                "name":"Classic"
+                            },
+                            {
+                                "name":"Devil"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "email":{
+                "output":[
+                    {
+                        "command":"alpilgz1@gmail.com",
+                        "link":"https://mail.google.com/mail/u/1/#inbox?compose=CllgCJvkXKnqLHvZtPtCgLKzWrWGlBWbTRfkVZwKgSLFPdqvXbKjgQDFxRTkGzzhwKsQNrXsNJV"
+                    }
+                    
+                ]
+            },
+            "banner":{
+                "output":[
+                   "█████╗  ██╗     ██████╗ ███████╗██████╗ ███████╗███╗   ██╗",
+                   "██╔══██╗██║     ██╔══██╗██╔════╝██╔══██╗██╔════╝████╗  ██║",
+                   "███████║██║     ██████╔╝█████╗  ██████╔╝█████╗  ██╔██╗ ██║",
+                   "██╔══██║██║     ██╔═══╝ ██╔══╝  ██╔══██╗██╔══╝  ██║╚██╗██║",
+                   "██║  ██║███████╗██║     ███████╗██║  ██║███████╗██║ ╚████║",
+                   "╚═╝  ╚═╝╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝",
+                                                                              
+                    "██╗██╗      ██████╗  █████╗ ███████╗",                     
+                    "██║██║     ██╔════╝ ██╔══██╗╚══███╔╝",                      
+                    "██║██║     ██║  ███╗███████║  ███╔╝ ",                      
+                    "██║██║     ██║   ██║██╔══██║ ███╔╝  ",                      
+                    "██║███████╗╚██████╔╝██║  ██║███████╗",                      
+                    "╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝",                      
+                                                                              
+                    "Welcome to my interactive web terminal.",
+                    "For a list of available commands, type 'help'."
+                ]
+            }
+        }
+    }
+]
