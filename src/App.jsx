@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Banner from "./Components/Banner/Banner";
 import Prompt from "./Components/Prompt/Prompt";
 import Data from './Config.json';
 import { useTypewriter } from "react-simple-typewriter";
+import { MainContext } from "./Components/Context/MainContext";
 
 function App() {
-  const [inputHistory, setInputHistory] = useState([]);
-  const [promptList, setPromptList] = useState([{}]);
+  const {setInputHistory,inputHistory,setPromptList,promptList} = useContext(MainContext)
+
 
   const getStoredTheme = localStorage.getItem("theme") || "Classic"
   const [theme, setTheme] = useState(getStoredTheme)
 
-  console.log(theme);
   
   const changeThemeColor  = (newTheme) => {
     const previousTheme = localStorage.getItem("theme")
@@ -153,6 +153,7 @@ function App() {
   const handleCommandSubmit = (inputValue) => {
     setInputHistory([...inputHistory, inputValue]);
     setPromptList([...promptList, {}]);
+  
   };
 
   const TypeWritterText = ({ text }) => {
@@ -169,7 +170,7 @@ function App() {
       {promptList.map((_, index) => (
         <div key={index} className="prompt-output-block">
           <Prompt
-            inputHistory={inputHistory}
+    
             handleCommandSubmit={handleCommandSubmit}
           />
           {inputHistory[index] && (

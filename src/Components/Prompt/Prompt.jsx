@@ -1,13 +1,13 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useContext } from 'react';
 import './Prompt.css';
 import { Cursor } from 'react-simple-typewriter';
+import { MainContext } from '../Context/MainContext';
 
 const Prompt = ({handleCommandSubmit}) => {
-  const [inputValue, setInputValue] = useState("");
+ 
   const [inputWidth, setInputWidth] = useState("1ch");
-  const [disabled, setDisabled] = useState(false); 
+  const {disabled,setDisabled,inputValue,setInputValue} = useContext(MainContext)
   
-  const [submittedValue, setSubmittedValue] = useState(""); 
 
 
   const inputRef = useRef(null);
@@ -34,7 +34,6 @@ const Prompt = ({handleCommandSubmit}) => {
     if (e.key === 'Enter') {
       if(e.target.value.trim()){
       handleCommandSubmit(inputValue);
-      setSubmittedValue(inputValue); 
       setInputWidth('1ch');
       setDisabled(true); 
    
