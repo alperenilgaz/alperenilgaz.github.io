@@ -6,8 +6,10 @@ import { MainContext } from '../Context/MainContext';
 const Prompt = ({handleCommandSubmit}) => {
  
   const [inputWidth, setInputWidth] = useState("1ch");
-  const {disabled,setDisabled,inputValue,setInputValue} = useContext(MainContext)
   
+  const [disabled, setDisabled] = useState(false); 
+  const [inputValue, setInputValue] = useState("");
+    
 
 
   const inputRef = useRef(null);
