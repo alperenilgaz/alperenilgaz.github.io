@@ -20,7 +20,7 @@
                         "description":"View coding projects"
                     },
                     {
-                        "command":"Theme",
+                        "command":"theme",
                         "description":"Change theme color"
                     },    
                     {

@@ -12,6 +12,8 @@ const Prompt = () => {
   const {setInputHistory,inputHistory, promptList, setPromptList, outputList, setOutputList} = useContext(MainContext)
     
 
+  
+
 
   const inputRef = useRef(null);
 
@@ -24,7 +26,7 @@ const Prompt = () => {
 
   const handleInputChange = (e) => {
     setInputWidth(`${e.target.value.length + 1}ch`);
-    setInputValue(e.target.value);
+    setInputValue(e.target.value.toLocaleLowerCase());
   };
 
   const handleContainerClick = () => {
