@@ -14,14 +14,12 @@ const Prompt = () => {
 
 
   const inputRef = useRef(null);
-  const newRef = useRef(null)
+
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
-    if(newRef.current){
-      newRef.current.scrollIntoView({behavior:"smooth"})
-    }
+ 
   }, []);
 
   const handleInputChange = (e) => {
@@ -52,9 +50,8 @@ const Prompt = () => {
           setOutputList([...outputList, inputValue]);
           setPromptList([...promptList, createElement(Prompt)]);
           setDisabled(true); 
-  
         }
-   
+   setInputWidth('1ch')
     }
     }
   
@@ -84,7 +81,7 @@ const Prompt = () => {
             disabled={disabled}
           />
 
-          <span ref={newRef} className={`cursor ${disabled === true ? 'hidden' : ''}`}>
+          <span  className={`cursor ${disabled === true ? 'hidden' : ''}`}>
             <Cursor cursorStyle="|" />
           </span>
         </div>
