@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import Banner from "./Components/Banner/Banner";
 import Prompt from "./Components/Prompt/Prompt";
 import Data from './Config.json';
@@ -6,36 +6,36 @@ import { useTypewriter } from "react-simple-typewriter";
 import { MainContext } from "./Components/Context/MainContext";
 
 function App() {
-  const {setInputHistory,inputHistory,setPromptList,promptList} = useContext(MainContext)
+  const {  inputHistory, outputList, promptList } = useContext(MainContext);
+
+  const getStoredTheme = localStorage.getItem("theme") || "Classic";
+  const [theme, setTheme] = useState(getStoredTheme);
 
 
-  const getStoredTheme = localStorage.getItem("theme") || "Classic"
-  const [theme, setTheme] = useState(getStoredTheme)
 
-  
-  const changeThemeColor  = (newTheme) => {
-    const previousTheme = localStorage.getItem("theme")
+  const changeThemeColor = (newTheme) => {
+    const previousTheme = localStorage.getItem("theme");
 
-    if(previousTheme){
-      document.body.classList.remove(previousTheme)
-
-    }if(newTheme){
-        document.body.classList.add(newTheme)
-        localStorage.setItem("theme",newTheme)
+    if (previousTheme) {
+      document.body.classList.remove(previousTheme);
     }
-  }
+    if (newTheme) {
+      document.body.classList.add(newTheme);
+      localStorage.setItem("theme", newTheme);
+    }
+  };
 
   useEffect(() => {
-    changeThemeColor(theme)
-  },[theme])
+    changeThemeColor(theme);
+  }, [theme]);
 
   useEffect(() => {
-    const lastInput = inputHistory[inputHistory.length - 1];
+    const lastInput = outputList[outputList.length - 1];
 
     if (lastInput === 'cv') {
       const link = document.createElement("a");
-      link.href = "/cv.pdf"; 
-      link.download = "cv.pdf"; 
+      link.href = "/cv.pdf";
+      link.download = "cv.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -49,7 +49,12 @@ function App() {
       document.body.removeChild(emailLink);
     }
 
-  }, [inputHistory]);
+ 
+
+  }, [outputList]);
+
+
+
 
   const renderOutput = (inputList, isLastCommand) => {
     const commands = Data[0].commands;
@@ -111,21 +116,16 @@ function App() {
           </div>
         );
       case 'theme':
-        // console.log(item.commands.theme.output[0].description[1]);
-        // console.log(item.description[0].name);
-
-          return commands.theme.output.map((item,key) => (
-            <div key={key} className="theme">
-              <p className="theme-command">{renderText(item.command)}</p>
-              <div className="theme-btn">
-              {item.description.map((item,key) => (
-                <button key={key} onClick={() =>setTheme(item.name)}>{renderText(item.name)}</button>
+        return commands.theme.output.map((item, key) => (
+          <div key={key} className="theme">
+            <p className="theme-command">{renderText(item.command)}</p>
+            <div className="theme-btn">
+              {item.description.map((descItem, descKey) => (
+                <button key={descKey} onClick={() => setTheme(descItem.name)}>{renderText(descItem.name)}</button>
               ))}
-              </div>
             </div>
-          ))
-          
-         
+          </div>
+        ));
       case 'email':
         return commands.email.output.map((item, key) => (
           <div key={key} className="email">
@@ -139,7 +139,6 @@ function App() {
             <code>{renderText(item)}</code>
           </pre>
         ));
-
       default:
         return (
           <div className="default">
@@ -150,11 +149,7 @@ function App() {
     }
   };
 
-  const handleCommandSubmit = (inputValue) => {
-    setInputHistory([...inputHistory, inputValue]);
-    setPromptList([...promptList, {}]);
   
-  };
 
   const TypeWritterText = ({ text }) => {
     const [textOutput] = useTypewriter({
@@ -165,22 +160,24 @@ function App() {
   };
 
   return (
+    <>
+
     <div className="app">
       <Banner />
-      {promptList.map((_, index) => (
+      {promptList.map((prompt, index) => (
         <div key={index} className="prompt-output-block">
-          <Prompt
-    
-            handleCommandSubmit={handleCommandSubmit}
-          />
-          {inputHistory[index] && (
-            <div className="output-container">
-              {renderOutput(inputHistory[index], index === inputHistory.length - 1)}
+        {prompt}
+          {outputList[index] && (
+            <div  className="output-container">
+              {renderOutput(outputList[index], index === outputList.length - 1)}
             </div>
           )}
         </div>
       ))}
+
     </div>
+      
+    </>
   );
 }
 

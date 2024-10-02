@@ -1,22 +1,26 @@
-import React, { useRef, useState, useEffect, useContext } from 'react';
+import React, { useRef, useState, useEffect, useContext, createElement } from 'react';
 import './Prompt.css';
 import { Cursor } from 'react-simple-typewriter';
 import { MainContext } from '../Context/MainContext';
 
-const Prompt = ({handleCommandSubmit}) => {
+const Prompt = () => {
  
   const [inputWidth, setInputWidth] = useState("1ch");
   
   const [disabled, setDisabled] = useState(false); 
   const [inputValue, setInputValue] = useState("");
+  const {setInputHistory,inputHistory, promptList, setPromptList, outputList, setOutputList} = useContext(MainContext)
     
 
 
   const inputRef = useRef(null);
-
+  const newRef = useRef(null)
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
+    }
+    if(newRef.current){
+      newRef.current.scrollIntoView({behavior:"smooth"})
     }
   }, []);
 
@@ -35,9 +39,21 @@ const Prompt = ({handleCommandSubmit}) => {
 
     if (e.key === 'Enter') {
       if(e.target.value.trim()){
-      handleCommandSubmit(inputValue);
-      setInputWidth('1ch');
-      setDisabled(true); 
+        setInputHistory([...inputHistory,inputValue])
+        if(inputValue === "clear"){
+          setOutputList([]);
+          setDisabled(false);
+          setPromptList([]);
+          setTimeout(() => {
+            setPromptList([createElement(Prompt)]);
+          }, 100);
+        }
+        else{
+          setOutputList([...outputList, inputValue]);
+          setPromptList([...promptList, createElement(Prompt)]);
+          setDisabled(true); 
+  
+        }
    
     }
     }
@@ -46,7 +62,7 @@ const Prompt = ({handleCommandSubmit}) => {
 
   return (
     <>
-      <div onClick={handleContainerClick} className="prompt-container">
+      <div  onClick={handleContainerClick} className="prompt-container">
         <div className="prompt">
           <span>
             visitor@alperen.site:~$ {
@@ -68,7 +84,7 @@ const Prompt = ({handleCommandSubmit}) => {
             disabled={disabled}
           />
 
-          <span className={`cursor ${disabled === true ? 'hidden' : ''}`}>
+          <span ref={newRef} className={`cursor ${disabled === true ? 'hidden' : ''}`}>
             <Cursor cursorStyle="|" />
           </span>
         </div>
