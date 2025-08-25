@@ -1,0 +1,105 @@
+{
+    "tezbitti":[
+        {
+            "location":"Turkey",
+            "domain":"tezbitti.com",
+            "url":"http://www.tezbitti.com",
+            "img":"tezbitti.jpg",
+            "tag":[
+                {
+                    "id":1,
+                    "title":"nodejs"
+                },
+                
+                {
+                    "id":2,
+                    "title":"reactjs"
+                },
+
+                {
+                    "id":3,
+                    "title":"python"
+                },
+                {
+                    "id":4,
+                    "title":"lxml"
+                },
+                {
+                    "id":5,
+                    "title":"ai"
+                }
+            ],
+            "text":"I created an AI-powered academic proofreading platform for theses and research papers. I developed a DOCX XML-level proofreading system that preserves formatting, applied multi-threaded processing to significantly reduce editing time, and integrated seamless Google Drive support."
+        }
+               ],
+    "atabaum":[
+                {
+                    "location":"Turkey",
+                    "domain":"atabaum.com",
+                    "url":"https://atabaum.atauni.edu.tr",
+                    "img":"atabaum.jpg",
+                    "tag":[
+                        {
+                            "id":1,
+                            "title":"laravel"
+                        },
+                        
+                        {
+                            "id":2,
+                            "title":"mysql"
+                        },
+                        {
+                            "id":3,
+                            "title":"git"
+                        },
+                        {
+                            "id":4,
+                            "title":"github"
+                        },
+                        {
+                            "id":5,
+                            "title":"ai"
+                        }
+                    ],
+                    "text": "I developed a full-stack license tracking system using Laravel, led the team with Git-based collaboration, and guided fellow interns as team leader while ensuring project scalability and code quality."
+                }
+              ],
+
+    "ataseng":[
+                {
+                    "location":"Turkey",
+                    "domain":"ataseng.com",
+                    "url":"https://ataseng.com",
+                    "img":"ataseng.jpg",
+                    "tag":[
+                        {
+                            "id":1,
+                            "title":"reactjs"
+                        },
+                        
+                        {
+                            "id":2,
+                            "title":"django"
+                        },
+                        {
+                            "id":3,
+                            "title":"git"
+                        },
+                        {
+                            "id":4,
+                            "title":"project management"
+                        },
+                        {
+                            "id":5,
+                            "title":"python"
+                        },
+                        {
+                            "id":6,
+                            "title":"figma"
+                        }
+                    ],
+                        "text": "I built the official website of the student club from scratch, formed the development team, designed the UI in Figma, and took an active role in both frontend and backend, co-leading the entire project with my advisor."
+                }
+              ]
+}
+    

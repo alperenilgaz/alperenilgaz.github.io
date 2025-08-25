@@ -1,0 +1,151 @@
+.header{
+    display: flex;
+    z-index: 999999;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    gap: 20vw;
+    font-family: 'Fira Code', 'Roboto Mono', 'Courier New', monospace;
+    padding: 15px;
+}
+
+.mobile-header {
+    z-index: 9999;
+    width: auto;            
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position: fixed;
+    top: 50%;                 
+    transition: right 1s ease,opacity 1s ease;
+    right: -120px;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.mobile-header.show{
+    right: 10px;
+    opacity: 1;
+}
+
+.mobilde-header-menu ul {
+  display: flex;
+  flex-direction: column;       
+  justify-content: center; 
+  align-items: center;     
+  gap: 15px;                   
+  list-style: none;
+  font-size: 19px;
+  margin: 0;
+  padding: 0;
+}
+.mobilde-header-menu ul li {
+    display: flex;
+    cursor: pointer;
+    align-items: center; 
+    font-size: 18px;
+    justify-content: center;
+    color: rgb(20, 80, 80);
+    padding: 5px 5px;
+    transition: border 1s ease, box-shodow 1s ease, color 1s ease;
+}
+
+.dark .mobilde-header-menu ul li{
+    color: var(--text-color);
+}
+
+.mobilde-header-menu ul li:hover{
+    color: #fff;
+}
+
+
+.header-logo h2{
+    color: var(--text-color);
+    font-size: 25px;
+}
+.logo-dot{
+    color: #fff;
+}
+.logo-dash{
+    color: #503D75;
+}
+
+.header-menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+.header-menu ul li{
+    list-style: none;
+    cursor: pointer;
+    transition: color 0.6s ease;
+    position: relative;
+    counter-increment: menuCounter;
+    font-family: 'Fira Code', 'Roboto Mono', 'Courier New', monospace;
+}
+.header-menu ul li::before {
+  content: counter(menuCounter, decimal-leading-zero);
+  position: absolute;
+  top: -10px;
+  right: 0;
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+}
+@media (max-width: 480px) {
+    .header-menu{
+        display: none;
+    }
+    .mobile-header{
+    display: flex;
+}
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .header-menu{
+        display: none;
+    }
+    
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+.header-menu{
+        display: none;
+    }
+    
+}
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    .header-menu ul{
+        gap: 4vw;
+    }
+    .header-menu ul li{
+        font-size: 15px;
+    }
+    .header{
+        gap: 10vw;
+    }
+
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+}
+
+@media (min-width: 1920px) {
+}

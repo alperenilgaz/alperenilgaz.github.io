@@ -1,0 +1,78 @@
+[
+    {
+        "id":1,
+        "img":"ataseng.jpg",
+        "title":"Club Website",
+        "subtitle":"Web Development",
+        "tag":"web",
+        "link":"https://ataseng.com"
+    },
+
+    
+    {
+        "id":2,
+        "img":"lojman.jpg",
+        "title":"Housing Management",
+        "subtitle":"Web Development",
+        "tag":"web",
+        "link":"https://lojmanyonetimi.atauni.edu.tr"
+    },
+    
+    
+    {
+        "id":3,
+        "img":"ecommerce.jpg",
+        "title":"E-Commerce App",
+        "subtitle":"Web Development",
+        "tag":"web",
+        "link":"https://github.com/alperenilgaz/E-commerceApp"
+    },
+
+    {
+        "id":4,
+        "img":"license.jpg",
+        "title":"License Track System",
+        "subtitle":"Web Development",
+        "tag":"web",
+        "link":"https://github.com/alperenilgaz"
+    },
+    {
+        "id":5,
+        "img":"coffe.webp",
+        "title":"Coffe Shop Website",
+        "subtitle":"Web Development",
+        "tag":"web",
+        "link":"https://github.com/alperenilgaz/Coffe-Shop-react"
+    },
+
+    {
+        "id":6,
+        "img":"yazili.svg",
+        "title":"Thesis Editing Tool",
+        "subtitle":"Artificial intelligence",
+        "tag":"ai",
+        "link":"https://tezbitti.com"
+        
+    },
+
+    {
+        "id":7,
+        "img":"network.jpg",
+        "title":"Network Analyzer",
+        "subtitle":"Artificial intelligence",
+        "tag":"ai",
+        "link":"#"
+    },
+
+    {
+        "id":8,
+        "img":"github.jpg",
+        "title":"All Project",
+        "subtitle":"Github Page",
+        "tag":["web","ai"],
+        "link":"https://github.com"
+    }
+
+
+
+]

@@ -1,0 +1,24 @@
+{
+  "frontend": [
+    { "name": "HTML", "level": "Advanced","icon":"FaHtml5"},
+    { "name": "CSS", "level": "Advanced","icon":"IoLogoCss3"},
+    { "name": "JavaScript", "level": "Advanced","icon":"FaJs"},
+    { "name": "React", "level": "Advanced","icon":"FaReact"},
+    { "name": "Redux", "level": "Intermediate","icon":"SiRedux"},
+    { "name": "Tailwind CSS", "level": "Intermediate","icon":"RiTailwindCssFill"},
+    { "name": "Bootstrap", "level": "Intermediate","icon":"FaBootstrap"},
+    { "name": "Antd", "level": "Intermediate","icon":"SiAntdesign"},
+    { "name": "jQuery", "level": "Intermediate","icon":"DiJqueryLogo"}
+  ],
+  "backend": [
+    { "name": "Python", "level": "Intermediate", "icon": "FaPython" },
+    { "name": "Django", "level": "Intermediate", "icon": "SiDjango" },
+    { "name": "Node.js", "level": "Intermediate", "icon": "IoLogoNodejs" },
+    { "name": "Laravel", "level": "Intermediate", "icon": "FaLaravel" },
+    { "name": "PHP", "level": "Intermediate", "icon": "FaPhp" },
+    { "name": "Flask", "level": "Beginner", "icon": "SiFlask" },
+    { "name": "MySQL", "level": "Intermediate", "icon": "DiMysql" },
+    { "name": "PostgreSQL", "level": "Intermediate", "icon": "DiPostgresql" },
+    { "name": "MongoDB", "level": "Intermediate", "icon": "DiMongodb" }
+  ]
+}

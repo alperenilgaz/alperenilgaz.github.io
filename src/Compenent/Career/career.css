@@ -1,0 +1,552 @@
+.career-section {
+  background: linear-gradient(180deg, #ddd 0%, #ddd 100%);
+  margin-top: 0;
+  border-top: 0;
+  position: relative;
+  padding-top: 40px;
+  padding: 30px;
+
+  
+  
+
+
+}
+.dark .career-section {
+  background: linear-gradient(180deg, #111013 0%, #111013 100%);
+  margin-top: 0;
+  border-top: 0;
+}
+
+.career-section{
+    padding-top: 2vw;
+}
+.carrer-section-title h2{
+    text-align: center;
+    color: #333;
+    font-size: 80px;
+    transition: color 1s ease;
+}
+
+.dark .carrer-section-title h2{
+    color: #eee;
+}
+
+
+.career-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    padding-top: 5vw;
+}
+.collapse-element{
+    background-color: #9B37FF;
+    padding: 15px;
+    z-index: 9999;
+    transition: background-color 1s ease;
+    border-radius: 5px;
+    width: 40%;
+    cursor: pointer;
+    position: relative;
+}
+
+.collapse-element:hover{
+  background-color: #cf4cf7;
+}
+.dark .collapse-element:hover{
+  background-color: #9B37FF;
+}
+
+.dark .collapse-element{
+    background-color: #430D79;
+
+}
+
+.modal-wrapper-tezbitti,
+.modal-wrapper-ataseng,
+.modal-wrapper-atabaum
+{
+  z-index: 9999;
+  max-height: 0;          
+  overflow: hidden;  
+  transition: max-height 0.3s ease-in-out; 
+  width: 40%;
+}
+
+.modal-container-tezbitti,
+.modal-container-ataseng,
+.modal-container-atabaum
+{
+
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 1s ease, transform 1s ease;
+
+}
+
+.career-container.tezbitti .modal-wrapper-tezbitti,
+.career-container.ataseng .modal-wrapper-ataseng,
+.career-container.atabaum .modal-wrapper-atabaum{
+  max-height: 1200px;
+}
+.career-container.tezbitti .modal-container-tezbitti-,
+.career-container.ataseng .modal-container-ataseng
+.career-container.atabaum .modal-container-atabaum{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-tezbitti,
+.modal-ataseng,
+.modal-atabaum{
+  background-color: #601ba5;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: background-color 1s ease;
+  padding: 1vw;
+}
+
+.dark .modal-tezbitti,
+.dark .modal-ataseng,
+.dark .modal-atabaum{
+  background-color: #241D41;
+}
+
+
+.modal-title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2vw;
+}
+
+.modal-title-location,
+.modal-title-website{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.modal-title-location p:nth-child(1){
+  color: #9B37FF;
+  height: 25px;
+  font-size: 25px;
+}
+.modal-title-website a:nth-child(1){
+  color: #9B37FF;
+  height: 20px;
+  font-size: 20px;
+}
+
+.modal-title-website a:nth-child(2),
+.modal-title-location p:nth-child(2)
+{
+  text-decoration: none;
+  color: #C2C0CA;
+}
+
+.modal-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-info-text p{
+  padding-top: 10px;
+  width: 80%;
+  text-align: justify;
+  color: #F0F0F2;
+  font-size: 19px;
+  line-height: 1.5rem;
+}
+
+.modal-info-image img{
+width: 150px;    
+    
+}
+.modal-info-image .tezbitti{
+    filter: brightness(0) invert(1);
+
+}
+
+.collapse-element::before,
+.collapse-element::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  background-color: #eee;
+  transition: transform 0.3s ease;
+}
+
+.modal-tag{
+  padding-top: 1vw ;
+}
+.modal-tag ul{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1vw;
+  list-style: none;
+}
+
+.modal-tag ul li{
+  color: #ddd;
+  background-color:#cf4cf7;
+  padding: 6px 20px;
+  border-radius: 15px;
+  transition: color 1s ease,background-color 1s ease;
+  white-space: nowrap;
+}
+
+.dark .modal-tag ul li{
+  background-color: #2C3599;
+   color: #C2C0CA ;
+}
+
+.collapse-element::before {
+  width: 10px;
+  height: 2px;
+  transform: translateY(-50%);
+  
+}
+
+.collapse-element::after {
+  width: 2px;
+  height: 10px;
+  transform: translateY(-50%);
+  right: 14px; 
+}
+
+.collapse-element.active::after {
+  transform: translate(-50%) scaleY(0);
+}
+.collapse-element.active::before {
+  transform: rotate(180deg) scaleY(1);
+}
+
+
+
+
+.collapse-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.career-title{
+    color: #eee;
+    width: 100%;
+    white-space: nowrap;
+    min-width: 150px;
+    transition: color 1s ease;
+    font-size: 18px;
+}
+
+.career-date{
+    color: #eee;
+    transition: color 1s ease;
+    font-size: 17px;
+    white-space: nowrap;
+    width: 20%;
+    font-weight: bold;
+}
+
+.career-date span{
+    color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+
+
+@media (max-width: 480px) {
+
+  .carrer-section-title h2{
+    font-size: 40px;
+  }
+  .collapse-element{
+    width: 100%;
+  }
+  .career-title{
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .career-date{
+    display: none;    
+  }
+  .modal-wrapper-tezbitti,
+  .modal-wrapper-ataseng,
+  .modal-wrapper-atabaum{
+    width: 100%;
+  }
+  .modal-info{
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .modal-info-text p{
+    font-size: 15px;
+    width: 100%;
+  }
+  .modal-info-image img{
+    width: 25%;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+  }
+  .modal-container{
+    position: relative;
+  }
+  .modal-title{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30vw 15px 0 15px;
+    
+  }
+  .modal-tag ul{
+    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .modal-tag ul li{
+    white-space: normal;
+    
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .carrer-section-title h2{
+    font-size: 40px;
+  }
+  .collapse-element{
+    width: 90%;
+  }
+  .career-title{
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .career-date{
+    display: none;    
+  }
+  .modal-wrapper-tezbitti,
+  .modal-wrapper-ataseng,
+  .modal-wrapper-atabaum{
+    width: 90%;
+  }
+  .modal-info{
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .modal-info-text p{
+    font-size: 15px;
+    width: 100%;
+  }
+  .modal-info-image img{
+    width: 25%;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+  }
+  .modal-container{
+    position: relative;
+  }
+  .modal-title{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30vw 15px 0 15px;
+    
+  }
+  .modal-tag ul{
+    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .modal-tag ul li{
+    white-space: normal;
+    
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carrer-section-title h2{
+    font-size: 40px;
+  }
+  .collapse-element{
+    width: 90%;
+  }
+  .career-title{
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .career-date{
+    padding-right: 2vw;
+  }
+  .modal-wrapper-tezbitti,
+  .modal-wrapper-ataseng,
+  .modal-wrapper-atabaum{
+    width: 90%;
+  }
+  .modal-info{
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .modal-info-text p{
+    font-size: 15px;
+    width: 100%;
+  }
+  .modal-info-image img{
+    width: 25%;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+  }
+  .modal-container{
+    position: relative;
+  }
+  .modal-title{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30vw 15px 0 15px;
+    
+  }
+  .modal-tag ul{
+    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .modal-tag ul li{
+    white-space: normal;
+    
+    padding: 5px;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .carrer-section-title h2{
+    font-size: 40px;
+  }
+  .collapse-element{
+    width: 90%;
+  }
+  .career-title{
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .career-date{
+    padding-right: 2vw;
+  }
+  .modal-wrapper-tezbitti,
+  .modal-wrapper-ataseng,
+  .modal-wrapper-atabaum{
+    width: 90%;
+  }
+  .modal-info{
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .modal-info-text p{
+    font-size: 15px;
+    width: 100%;
+  }
+  .modal-info-image img{
+    width: 25%;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+  }
+  .modal-container{
+    position: relative;
+  }
+  .modal-title{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30vw 15px 0 15px;
+    
+  }
+  .modal-tag ul{
+    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .modal-tag ul li{
+    white-space: normal;
+    
+    padding: 5px;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 1280px) and (max-width: 1570px) {
+  .carrer-section-title h2{
+    font-size: 40px;
+  }
+  .collapse-element{
+    width: 50%;
+  }
+  .career-title{
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .career-date{
+    padding-right: 2vw;
+  }
+  .modal-wrapper-tezbitti,
+  .modal-wrapper-ataseng,
+  .modal-wrapper-atabaum{
+    width: 50%;
+  }
+  .modal-info{
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .modal-info-text p{
+    font-size: 15px;
+    width: 100%;
+  }
+  .modal-info-image img{
+    width: 25%;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+  }
+  .modal-container{
+    position: relative;
+  }
+  .modal-title{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30vw 15px 0 15px;
+    
+  }
+  .modal-tag ul{
+    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .modal-tag ul li{
+    white-space: normal;
+    
+    padding: 5px;
+    text-align: center;
+  }
+}
+

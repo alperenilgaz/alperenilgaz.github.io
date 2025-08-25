@@ -1,0 +1,233 @@
+.work-section {
+  background: linear-gradient(180deg, #ddd 0%, #ddd 100%);
+  min-height: 100vh;
+  margin-top: 0;
+  border-top: 0;
+  position: relative;
+  padding-top: 40px;
+  padding: 30px;
+  
+
+
+}
+.dark .work-section {
+  background: linear-gradient(180deg, #111013 0%, #111013 100%);
+  min-height: 100vh;
+  margin-top: 0;
+  border-top: 0;
+}
+
+.work-section-welcome{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    
+}
+
+.work-section-welcome{
+    padding-left: 10vw;
+}
+
+
+
+.work-section-title h2{
+    font-size: 90px;
+    color: #333;
+    transition: color 1s ease;
+}
+.dark .work-section-title h2{
+    color: #eee;
+}
+
+.work-section-text{
+    font-size: 25px;
+    color: #333;
+    width: 40%;
+    transition: color 1s ease;
+    text-align: justify;
+}
+.dark .work-section-text{
+    color: #eee;
+
+}
+
+.tezbitti-logo img{
+    position: absolute;
+    top: 0;
+    width: 25%;
+    left:60%;
+    animation: spin3d 7s linear infinite;
+    transition: filter 1s ease;
+    transform-style: preserve-3d;  
+}
+@keyframes spin3d {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
+}
+
+.dark .tezbitti-logo img{
+    filter: brightness(0) invert(1);
+}
+.work-section-best-work{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    padding-left: 10vw;
+    padding-top: 20px;
+}
+
+.work-arrow{
+    transform: rotate(170deg);
+    width: 10%;
+    margin-left: 50px;
+
+}
+
+.best-work-title h4{
+    font-size: 40px;
+    color: #333;
+    transition: color 1s ease;
+}
+.best-work-name h4{
+  font-size: 30px;
+  color: #333;
+ transition: color 1s ease;
+
+}
+.dark .best-work-title h4{
+ 
+    color: #eee;
+}
+.dark .best-work-name h4{
+  color: #eee;
+}
+
+.best-work-btn button{
+    outline: none;
+    background-color:#9B37FF ;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid transparent;
+    transition: background-color 1s ease,border 1s ease,color 1s ease;
+    padding: 15px 35px;
+}
+
+.best-work-btn button:hover{
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #9B37FF;
+}
+.dark .best-work-btn button:hover{
+    color: #fff;
+}
+
+@media (max-width: 480px) {
+    .work-section-title h2{
+        font-size: 50px;
+    }
+    .work-section-text{
+        width: 80%;
+        font-size: 15px;
+    }
+
+    .work-section-best-work{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 40vw;
+    }
+    .tezbitti-logo img{
+        top: 10%;
+        left: 35%;
+        width: 40%;
+    }
+    .work-arrow{
+        width: 25%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .work-section-title h2{
+        font-size: 50px;
+    }
+    .work-section-text{
+        width: 70%;
+        font-size: 18px;
+    }
+
+    .work-section-best-work{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 40vw;
+    }
+    .tezbitti-logo img{
+        top: 20%;
+        left: 30%;
+        width: 40%;
+    }
+    .work-arrow{
+        width: 25%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+ .work-section-title h2{
+        font-size: 50px;
+    }
+    .work-section-text{
+        width: 70%;
+        font-size: 20px;
+    }
+
+    .work-section-best-work{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 40vw;
+    }
+    .tezbitti-logo img{
+        top: 10%;
+        left: 30%;
+        width: 40%;
+    }
+    .work-arrow{
+        width: 25%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .tezbitti-logo img{
+        top: 5%;
+        left: 55%;
+        width: 40%;
+    }
+    .work-arrow{
+        width: 25%;
+    }
+
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .tezbitti-logo img{
+        top: 5%;
+        left: 60%;
+        width: 30%;
+    }
+    .work-arrow{
+        width: 25%;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+}
+
+@media (min-width: 1920px) {
+
+}
