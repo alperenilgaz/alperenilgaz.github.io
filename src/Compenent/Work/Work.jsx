@@ -23,8 +23,7 @@ const Work = () => {
         y={150}
         amount={0.4}>
         <div className="work-section-text">
-            <p>Deployed 10+ scalable AI-driven, travel, event and telemedicine solutions as web and hybrid mobile apps using React SPA and PWA.  
-                0+ projects with clients worldwide, delivering innovative platforms and exploring advanced data analytics and visualization.
+            <p>Developed 50+ full-stack projects with clients worldwide, delivering scalable platforms built on Laravel, Node.js, and Django backends, and modern React.js frontends. 5+ deployed platforms in production, combining innovative architectures with advanced data processing and visualization.
             </p>
         </div>
         </AnimatedSection>
@@ -45,12 +44,16 @@ const Work = () => {
         </div>
 
         <div className="best-work-btn">
-            <button>View Project</button>
+            <a target='_blank' href="https://tezbitti.com">
+                <button>View Project</button>
+            </a>
         </div>
     </div>
 
     <div className="tezbitti-logo">
-        <img src={tezbitti} alt="" />
+        <a target='_blank' href="https://tezbitti.com">
+            <img src={tezbitti} alt="" />
+        </a>
     </div>
 
 
