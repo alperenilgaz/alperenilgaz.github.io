@@ -15,7 +15,7 @@ import AnimatedSection from '../Config/AnimatedSection';
 const Welcome = () => {
 
   return (
-    <section className="welcome">
+    <section id='home' className="welcome">
 
       <div className="welcome-section-info">
         <div className="welcome-section-title">
