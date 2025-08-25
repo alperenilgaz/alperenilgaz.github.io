@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.74b76d28.css",
-    "main.js": "/static/js/main.8d3df53f.js",
+    "main.js": "/static/js/main.10eebebc.js",
     "static/media/lojman.jpg": "/static/media/lojman.ff41abad358620a208ef.jpg",
     "static/media/light.jpg": "/static/media/light.d3e46eaa08a0bf1d60b1.jpg",
     "static/media/skills.jpg": "/static/media/skills.caedba441218059497d9.jpg",
@@ -49,10 +49,10 @@
     "static/media/yazısız.svg": "/static/media/yazısız.034cbec36df2cabb02b23b8b488e6905.svg",
     "index.html": "/index.html",
     "main.74b76d28.css.map": "/static/css/main.74b76d28.css.map",
-    "main.8d3df53f.js.map": "/static/js/main.8d3df53f.js.map"
+    "main.10eebebc.js.map": "/static/js/main.10eebebc.js.map"
   },
   "entrypoints": [
     "static/css/main.74b76d28.css",
-    "static/js/main.8d3df53f.js"
+    "static/js/main.10eebebc.js"
   ]
 }
