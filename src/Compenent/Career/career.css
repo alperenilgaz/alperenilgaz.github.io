@@ -7,7 +7,6 @@
   padding: 30px;
 
   
-  
 
 
 }
@@ -18,12 +17,12 @@
 }
 
 .career-section{
-    padding-top: 2vw;
+    padding-top: 5vw;
 }
 .carrer-section-title h2{
     text-align: center;
     color: #333;
-    font-size: 80px;
+    font-size: 60px;
     transition: color 1s ease;
 }
 
@@ -262,7 +261,9 @@ width: 150px;
 
 
 @media (max-width: 480px) {
-
+  .career-section{
+    padding-top: 10vw;
+  }
   .carrer-section-title h2{
     font-size: 40px;
   }
@@ -313,7 +314,6 @@ width: 150px;
   }
   .modal-tag ul li{
     white-space: normal;
-    
     padding: 5px;
     text-align: center;
   }

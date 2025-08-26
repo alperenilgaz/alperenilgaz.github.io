@@ -127,17 +127,15 @@
 }
 
 .project-title{
-    font-size: 30px;
+    font-size: 25px;
 }
 
-.project-tag{
-    padding: 20px;
-}
+
 
 
 .subtitle,
 .show-project{
-    font-size: 20px;
+    font-size: 17px;
     
 }
 .subtitle{
@@ -181,6 +179,16 @@
 
 @media (max-width: 480px) {
 
+    .filter-options{
+        gap: 2vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    }
+    .filter-by{
+        font-size: 15px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
     .project-title,
     .project-tag{
         padding: 10px;
@@ -193,12 +201,15 @@
          padding-top: 10vw;
     }
     .project-element{
-        width: 78%;
+        width: 100%;
     }
     .subtitle,
     .show-project{
     font-size: 15px;
     
+}
+.filter-elements ul li{
+    font-size: 14px;
 }
 }
 
@@ -210,8 +221,9 @@
          padding-left: 0;
          padding-top: 10vw;
     }
+
     .project-element{
-        width: 40%;
+        width: 100%;
     }
     .subtitle,
     .show-project{

@@ -25,27 +25,27 @@ const Project = () => {
 
     }
     const [filter, setfilter] = useState("")
-    
 
-    const filteredData =  data.filter(item => {
-        if(filter === ''){
+
+    const filteredData = data.filter(item => {
+        if (filter === '') {
             return true
         }
         return item.tag.includes(filter)
     })
 
- 
 
-    
-    
-    
-    
+
+
+
+
+
     return (
         <>
             <div className="all-project">
                 <AnimatedSection
-                y={100}
-                amount={0.2}
+                    y={100}
+                    amount={0.2}
                 >
                     <div className="filter-options">
                         <p className='filter-by'>Filter by</p>
@@ -64,30 +64,33 @@ const Project = () => {
                     {
                         filteredData.map((item, key) => {
                             const image = imageMap[item.img]
-                            
-                            return (
-                                    <motion.div
-                                        key={item.id}
-                                        className="project-element"
-                                        initial={{ opacity:0,x:50,y: 0 }}
-                                        whileInView={{opacity:1,y: 0 }}
-                                        viewport={{ once: true}}
 
-                                        transition={{ delay: key * 0.15, type: 'spring', stiffness: 70, damping: 18 }}
-                                        >
-                                    <a style={{textDecoration:"none"}} target='_blank' href={`${item.link}`}>
-                                    <div className="project-image">
-                                        <img className={`${item.id === 6 ? 'tezbitti-img' : '' }`} src={image} alt="" />
-                                    </div>
-                                    <div className="project-title">
-                                        <p>{item.title}</p>
-                                    </div>
-                                    <div className="project-tag">
-                                        <p className="subtitle">{item.subtitle}</p>
-                                        <p className="show-project">{item.id === 8 ? 'Github Profile' : 'Show Project'}</p>
-                                    </div>
+                            return (
+                                <motion.div
+                                    key={item.id}
+                                    className="project-element"
+                                    initial={{ opacity: 0, scale: 0.9 }} 
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{
+                                        delay: key * 0.125,
+                                        ease: "easeOut"
+                                    }}
+                                >
+
+                                    <a style={{ textDecoration: "none" }} target='_blank' href={`${item.link}`}>
+                                        <div className="project-image">
+                                            <img className={`${item.id === 6 ? 'tezbitti-img' : ''}`} src={image} alt="" />
+                                        </div>
+                                        <div className="project-title">
+                                            <p>{item.title}</p>
+                                        </div>
+                                        <div className="project-tag">
+                                            <p className="subtitle">{item.subtitle}</p>
+                                            <p className="show-project">{item.id === 8 ? 'Github Profile' : 'Show Project'}</p>
+                                        </div>
                                     </a>
-                                    </motion.div>
+                                </motion.div>
                             )
                         })
                     }

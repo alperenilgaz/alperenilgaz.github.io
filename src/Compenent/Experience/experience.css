@@ -1,6 +1,5 @@
 .experience-section {
   background: linear-gradient(180deg, #ddd 0%, #ddd 100%);
-  min-height: 100vh;
   margin-top: 0;
   border-top: 0;
   position: relative;
@@ -12,13 +11,12 @@
 }
 .dark .experience-section {
   background: linear-gradient(180deg, #111013 0%, #111013 100%);
-  min-height: 100vh;
   margin-top: 0;
   border-top: 0;
 }
 
 .experience-title h2{
-  font-size: 80px;
+  font-size: 60px;
   padding-top: 5vw;
   text-align: center;
   color: #333;
@@ -127,7 +125,7 @@ backdrop-filter: blur(5px);
 
 @media (max-width: 480px) {
 .experience-title h2{
-  font-size: 50px;
+  font-size: 40px;
 }
 .skills-image img{
 display: none;
@@ -136,15 +134,23 @@ display: none;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-
+  .skills-image img{
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-
+  .skills-image img{
+  display: none;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
-
+  .skills-image img{
+    top: 50%;
+    left: 15%;
+    width: 50%;
+  }
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
