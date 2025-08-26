@@ -348,3 +348,38 @@ ul li:hover:nth-child(4) a:after{
       }
 
 }
+
+@media (width: 912px) and (height: 1368px) {
+    .footer-section{
+      height: 60vh;
+    }
+    .footer-section-title h2{
+      font-size: 40px;
+    }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+}
+
+@media (width: 1147px) and (height: 746px) {
+    .footer-section{
+      height: 42vh;
+    }
+    .footer-section-title h2{
+      font-size: 40px;
+    }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+}
+
+
+

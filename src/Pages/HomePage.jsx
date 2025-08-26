@@ -16,7 +16,7 @@ const HomePage = () => {
     <Experience/>
     <Career/>
     <Footer/>
-<SplashCursor  SPLAT_RADIUS={0.041}/>
+<SplashCursor  SPLAT_RADIUS={0.0341}/>
 
 
 
