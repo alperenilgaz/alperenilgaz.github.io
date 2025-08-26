@@ -221,7 +221,7 @@ ul li:hover:nth-child(4) a:after{
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .footer-section{
-      height: 90vh;
+      height: 100vh;
       
     }
     .footer-section-title h2{
@@ -239,7 +239,7 @@ ul li:hover:nth-child(4) a:after{
 
 @media (min-width: 1024px) and (max-width: 1279px) {
     .footer-section{
-      height: 40vh;
+      height: 35vh;
     }
     .footer-section-title h2{
       font-size: 40px;
@@ -320,6 +320,22 @@ ul li:hover:nth-child(4) a:after{
 @media (width: 783px) and (height: 1754px) {
     .footer-section{
       height: 50vh;
+    }
+    .footer-section-title h2{
+      font-size: 40px;
+    }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+}
+
+@media (width: 1080px) and (height: 1920px) {
+    .footer-section{
+      height: 20vh;
     }
     .footer-section-title h2{
       font-size: 40px;
