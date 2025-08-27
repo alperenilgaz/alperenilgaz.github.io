@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.b25cfe78.css",
+    "main.css": "/static/css/main.9137cf57.css",
     "main.js": "/static/js/main.e607f5ea.js",
     "static/media/lojman.jpg": "/static/media/lojman.ff41abad358620a208ef.jpg",
     "static/media/light.jpg": "/static/media/light.d3e46eaa08a0bf1d60b1.jpg",
@@ -48,11 +48,11 @@
     "static/media/yazılı.svg": "/static/media/yazılı.f8baae1c250a96fd9b4c58148e5c55a0.svg",
     "static/media/yazısız.svg": "/static/media/yazısız.034cbec36df2cabb02b23b8b488e6905.svg",
     "index.html": "/index.html",
-    "main.b25cfe78.css.map": "/static/css/main.b25cfe78.css.map",
+    "main.9137cf57.css.map": "/static/css/main.9137cf57.css.map",
     "main.e607f5ea.js.map": "/static/js/main.e607f5ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.b25cfe78.css",
+    "static/css/main.9137cf57.css",
     "static/js/main.e607f5ea.js"
   ]
 }
